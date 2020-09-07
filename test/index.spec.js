@@ -20,6 +20,16 @@ const fixtures = {
 	`,
 };
 
+describe('error handling', () => {
+	test('no options', async () => {
+		expect(() => transform(fixtures.basicVar)).toThrowError('[postcss-custom-properties] a transformer must be passed in');
+	});
+
+	test('no transformer', async () => {
+		expect(() => transform(fixtures.basicVar, {})).toThrowError('[postcss-custom-properties] a transformer must be passed in');
+	});
+});
+
 describe('template string', () => {
 	test('namespace', async () => {
 		const output = await transform(fixtures.basicVar, {
@@ -29,9 +39,9 @@ describe('template string', () => {
 		expect(output).toMatchSnapshot();
 	});
 
-	test('path & name & ext', async () => {
+	test('filepath', async () => {
 		const output = await transform(fixtures.basicVar, {
-			transformer: '[path]-[name]-[ext]-[local]',
+			transformer: '[filepath]-[local]',
 		});
 
 		expect(output).toMatchSnapshot();
@@ -46,25 +56,25 @@ describe('template string', () => {
 			expect(output).toMatchSnapshot();
 		});
 
-		test('hash - md5 hash', async () => {
+		test('hash - truncated 3', async () => {
 			const output = await transform(fixtures.basicVar, {
-				transformer: '[hash:md5]',
+				transformer: '[hash:3]',
 			});
 
 			expect(output).toMatchSnapshot();
 		});
 
-		test('hash - md4 hash', async () => {
+		test('hash - sha128 hash', async () => {
 			const output = await transform(fixtures.basicVar, {
-				transformer: '[hash:md4]',
+				transformer: '[hash:sha128]',
 			});
 
 			expect(output).toMatchSnapshot();
 		});
 
-		test('hash - md5 hash - truncated 5', async () => {
+		test('hash - sha128 hash - truncated 5', async () => {
 			const output = await transform(fixtures.basicVar, {
-				transformer: '[hash:md5:5]',
+				transformer: '[hash:sha128:5]',
 			});
 
 			expect(output).toMatchSnapshot();
@@ -81,6 +91,14 @@ describe('template string', () => {
 		test('hash - base64 digest - truncated 5', async () => {
 			const output = await transform(fixtures.basicVar, {
 				transformer: '[hash:base64:5]',
+			});
+
+			expect(output).toMatchSnapshot();
+		});
+
+		test('hash - filepath namespace', async () => {
+			const output = await transform(fixtures.basicVar, {
+				transformer: '[hash:filepath:3]-[hash:3]',
 			});
 
 			expect(output).toMatchSnapshot();

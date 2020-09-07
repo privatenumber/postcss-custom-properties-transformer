@@ -1,13 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`template string filepath 1`] = `
+"
+	.className {
+		--_dir_src_file_css-color: red;
+		--_dir_src_file_css-font-size: 24px;
+		background: var(--_dir_src_file_css-color);
+		border-color: var(--_dir_src_file_css-color);
+		font-size: var(--_dir_src_file_css-font-size);
+	}
+	"
+`;
+
 exports[`template string hash hash - base64 digest - truncated 5 1`] = `
 "
 	.className {
-		--jUI8p: red;
-		--cPEFG: 24px;
-		background: var(--jUI8p);
-		border-color: var(--jUI8p);
-		font-size: var(--cPEFG);
+		--cN2l3: red;
+		--mx0Ku: 24px;
+		background: var(--cN2l3);
+		border-color: var(--cN2l3);
+		font-size: var(--mx0Ku);
 	}
 	"
 `;
@@ -15,47 +27,59 @@ exports[`template string hash hash - base64 digest - truncated 5 1`] = `
 exports[`template string hash hash - base64 digest 1`] = `
 "
 	.className {
-		--jUI8pPvZnSEQsIFlwVtaFQ__: red;
-		--cPEFGuCtdk9BKLAFZVbqyg__: 24px;
-		background: var(--jUI8pPvZnSEQsIFlwVtaFQ__);
-		border-color: var(--jUI8pPvZnSEQsIFlwVtaFQ__);
-		font-size: var(--cPEFGuCtdk9BKLAFZVbqyg__);
+		--cN2l37gFPcbRxJJXS86b_Q__: red;
+		--mx0Ku3BWCNA3oRyG_HWh8Q__: 24px;
+		background: var(--cN2l37gFPcbRxJJXS86b_Q__);
+		border-color: var(--cN2l37gFPcbRxJJXS86b_Q__);
+		font-size: var(--mx0Ku3BWCNA3oRyG_HWh8Q__);
 	}
 	"
 `;
 
-exports[`template string hash hash - md4 hash 1`] = `
+exports[`template string hash hash - filepath namespace 1`] = `
 "
 	.className {
-		--_8d423ca4fbd99d2110b08165c15b5a15: red;
-		--_70f1051ae0ad764f4128b0056556eaca: 24px;
-		background: var(--_8d423ca4fbd99d2110b08165c15b5a15);
-		border-color: var(--_8d423ca4fbd99d2110b08165c15b5a15);
-		font-size: var(--_70f1051ae0ad764f4128b0056556eaca);
+		--d9d-dda: red;
+		--d9d-b1d: 24px;
+		background: var(--d9d-dda);
+		border-color: var(--d9d-dda);
+		font-size: var(--d9d-b1d);
 	}
 	"
 `;
 
-exports[`template string hash hash - md5 hash - truncated 5 1`] = `
+exports[`template string hash hash - sha128 hash - truncated 5 1`] = `
 "
 	.className {
-		--_980ec: red;
-		--_61c94: 24px;
-		background: var(--_980ec);
-		border-color: var(--_980ec);
-		font-size: var(--_61c94);
+		--dda5d: red;
+		--b1d0a: 24px;
+		background: var(--dda5d);
+		border-color: var(--dda5d);
+		font-size: var(--b1d0a);
 	}
 	"
 `;
 
-exports[`template string hash hash - md5 hash 1`] = `
+exports[`template string hash hash - sha128 hash 1`] = `
 "
 	.className {
-		--_980ec1f88cd33f254ebf37026a51176e: red;
-		--_61c9494f131fbc9eecb42fd5720a9c6a: 24px;
-		background: var(--_980ec1f88cd33f254ebf37026a51176e);
-		border-color: var(--_980ec1f88cd33f254ebf37026a51176e);
-		font-size: var(--_61c9494f131fbc9eecb42fd5720a9c6a);
+		--dda5dfb8053dc6d1c492574bce9bfd: red;
+		--b1d0abb705608d037a11c86fc75a1f1: 24px;
+		background: var(--dda5dfb8053dc6d1c492574bce9bfd);
+		border-color: var(--dda5dfb8053dc6d1c492574bce9bfd);
+		font-size: var(--b1d0abb705608d037a11c86fc75a1f1);
+	}
+	"
+`;
+
+exports[`template string hash hash - truncated 3 1`] = `
+"
+	.className {
+		--dda: red;
+		--b1d: 24px;
+		background: var(--dda);
+		border-color: var(--dda);
+		font-size: var(--b1d);
 	}
 	"
 `;
@@ -63,11 +87,11 @@ exports[`template string hash hash - md5 hash 1`] = `
 exports[`template string hash hash 1`] = `
 "
 	.className {
-		--_8d423ca4fbd99d2110b08165c15b5a15: red;
-		--_70f1051ae0ad764f4128b0056556eaca: 24px;
-		background: var(--_8d423ca4fbd99d2110b08165c15b5a15);
-		border-color: var(--_8d423ca4fbd99d2110b08165c15b5a15);
-		font-size: var(--_70f1051ae0ad764f4128b0056556eaca);
+		--dda5dfb8053dc6d1c492574bce9bfd: red;
+		--b1d0abb705608d037a11c86fc75a1f1: 24px;
+		background: var(--dda5dfb8053dc6d1c492574bce9bfd);
+		border-color: var(--dda5dfb8053dc6d1c492574bce9bfd);
+		font-size: var(--b1d0abb705608d037a11c86fc75a1f1);
 	}
 	"
 `;
@@ -80,18 +104,6 @@ exports[`template string namespace 1`] = `
 		background: var(--namespace-color);
 		border-color: var(--namespace-color);
 		font-size: var(--namespace-font-size);
-	}
-	"
-`;
-
-exports[`template string path & name & ext 1`] = `
-"
-	.className {
-		--_dir_src-file-css-color: red;
-		--_dir_src-file-css-font-size: 24px;
-		background: var(--_dir_src-file-css-color);
-		border-color: var(--_dir_src-file-css-color);
-		font-size: var(--_dir_src-file-css-font-size);
 	}
 	"
 `;
@@ -111,11 +123,11 @@ exports[`transformer function collision warning 1`] = `
 exports[`transformer function hash 1`] = `
 "
 	.className {
-		--mA7B_IzTPy: red;
-		--YclJTxMfvJ: 24px;
-		background: var(--mA7B_IzTPy);
-		border-color: var(--mA7B_IzTPy);
-		font-size: var(--YclJTxMfvJ);
+		--cN2l37gFPc: red;
+		--mx0Ku3BWCN: 24px;
+		background: var(--cN2l37gFPc);
+		border-color: var(--cN2l37gFPc);
+		font-size: var(--mx0Ku3BWCN);
 	}
 	"
 `;

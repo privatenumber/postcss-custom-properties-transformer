@@ -1,8 +1,13 @@
 {
   "name": "postcss-custom-properties-transformer",
   "version": "0.0.0-semantic-release",
-  "description": "Template for Node package repos",
-  "keywords": [],
+  "description": "PostCSS plugin to transform custom properties",
+  "keywords": [
+    "postcss",
+    "plugin",
+    "custom properties",
+    "transformer"
+  ],
   "license": "MIT",
   "repository": "privatenumber/postcss-custom-properties-transformer",
   "author": "Hiroki Osame <hiroki.osame@gmail.com>",
