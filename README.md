@@ -25,7 +25,7 @@ Add `postcss-custom-properties-transformer` to your PostCSS configuration (eg. `
 module.exports = {
 	plugins: [
 
-		// Make sure it's above plugins that transform custom properties
+		// Insert above plugins that transform custom properties
 +		require('postcss-custom-properties-transformer')({
 +			transformer: '[hash:4]'
 +		}),
