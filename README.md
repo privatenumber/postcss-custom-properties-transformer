@@ -24,11 +24,12 @@ Add `postcss-custom-properties-transformer` to your PostCSS configuration (eg. `
 ```diff
 module.exports = {
 	plugins: [
+
 		// Make sure it's above plugins that transform custom properties
-		// (eg. postcss-preset-env)
 +		require('postcss-custom-properties-transformer')({
 +			transformer: '[hash:4]'
 +		}),
+
 		require('postcss-preset-env')()
 	]
 };
