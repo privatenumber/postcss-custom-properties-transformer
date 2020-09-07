@@ -1,13 +1,12 @@
 const postcss = require('postcss');
 const postcssCustomPropertiesTransformer = require('..');
 
-const transform = (css, opts) => postcss([
-	postcssCustomPropertiesTransformer(opts)
+const transform = (css, options) => postcss([
+	postcssCustomPropertiesTransformer(options),
 ]).process(css, {
 	from: '/dir/src/file.css',
 	to: '/dir/dist/file.css',
-}).then(({ css }) => css);
-
+}).then(({css}) => css);
 
 const fixtures = {
 	basicVar: `
@@ -22,7 +21,6 @@ const fixtures = {
 };
 
 describe('template string', () => {
-
 	test('namespace', async () => {
 		const output = await transform(fixtures.basicVar, {
 			transformer: 'namespace-[local]',
@@ -40,7 +38,6 @@ describe('template string', () => {
 	});
 
 	describe('hash', () => {
-
 		test('hash', async () => {
 			const output = await transform(fixtures.basicVar, {
 				transformer: '[hash]',
@@ -92,10 +89,9 @@ describe('template string', () => {
 });
 
 describe('transformer function', () => {
-
 	test('namespace', async () => {
 		const output = await transform(fixtures.basicVar, {
-			transformer({ local }) {
+			transformer({local}) {
 				return `namespace-${local}`;
 			},
 		});

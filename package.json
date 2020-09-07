@@ -31,6 +31,7 @@
   },
   "dependencies": {
     "cssesc": "^3.0.0",
+    "has-own-prop": "^2.0.0",
     "postcss": "^7.0.32",
     "postcss-values-parser": "^3.2.1"
   }
