@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`template string hash hash - base64 digest - truncated 5 1`] = `
+"
+	.className {
+		--jUI8p: red;
+		--cPEFG: 24px;
+		background: var(--jUI8p);
+		border-color: var(--jUI8p);
+		font-size: var(--cPEFG);
+	}
+	"
+`;
+
+exports[`template string hash hash - base64 digest 1`] = `
+"
+	.className {
+		--jUI8pPvZnSEQsIFlwVtaFQ__: red;
+		--cPEFGuCtdk9BKLAFZVbqyg__: 24px;
+		background: var(--jUI8pPvZnSEQsIFlwVtaFQ__);
+		border-color: var(--jUI8pPvZnSEQsIFlwVtaFQ__);
+		font-size: var(--cPEFGuCtdk9BKLAFZVbqyg__);
+	}
+	"
+`;
+
+exports[`template string hash hash - md4 hash 1`] = `
+"
+	.className {
+		--_8d423ca4fbd99d2110b08165c15b5a15: red;
+		--_70f1051ae0ad764f4128b0056556eaca: 24px;
+		background: var(--_8d423ca4fbd99d2110b08165c15b5a15);
+		border-color: var(--_8d423ca4fbd99d2110b08165c15b5a15);
+		font-size: var(--_70f1051ae0ad764f4128b0056556eaca);
+	}
+	"
+`;
+
+exports[`template string hash hash - md5 hash - truncated 5 1`] = `
+"
+	.className {
+		--_980ec: red;
+		--_61c94: 24px;
+		background: var(--_980ec);
+		border-color: var(--_980ec);
+		font-size: var(--_61c94);
+	}
+	"
+`;
+
+exports[`template string hash hash - md5 hash 1`] = `
+"
+	.className {
+		--_980ec1f88cd33f254ebf37026a51176e: red;
+		--_61c9494f131fbc9eecb42fd5720a9c6a: 24px;
+		background: var(--_980ec1f88cd33f254ebf37026a51176e);
+		border-color: var(--_980ec1f88cd33f254ebf37026a51176e);
+		font-size: var(--_61c9494f131fbc9eecb42fd5720a9c6a);
+	}
+	"
+`;
+
+exports[`template string hash hash 1`] = `
+"
+	.className {
+		--_8d423ca4fbd99d2110b08165c15b5a15: red;
+		--_70f1051ae0ad764f4128b0056556eaca: 24px;
+		background: var(--_8d423ca4fbd99d2110b08165c15b5a15);
+		border-color: var(--_8d423ca4fbd99d2110b08165c15b5a15);
+		font-size: var(--_70f1051ae0ad764f4128b0056556eaca);
+	}
+	"
+`;
+
+exports[`template string namespace 1`] = `
+"
+	.className {
+		--namespace-color: red;
+		--namespace-font-size: 24px;
+		background: var(--namespace-color);
+		border-color: var(--namespace-color);
+		font-size: var(--namespace-font-size);
+	}
+	"
+`;
+
+exports[`template string path & name & ext 1`] = `
+"
+	.className {
+		--_dir_src-file-css-color: red;
+		--_dir_src-file-css-font-size: 24px;
+		background: var(--_dir_src-file-css-color);
+		border-color: var(--_dir_src-file-css-color);
+		font-size: var(--_dir_src-file-css-font-size);
+	}
+	"
+`;
+
+exports[`transformer function collision warning 1`] = `
+"
+	.className {
+		--collide: red;
+		--collide: 24px;
+		background: var(--collide);
+		border-color: var(--collide);
+		font-size: var(--collide);
+	}
+	"
+`;
+
+exports[`transformer function hash 1`] = `
+"
+	.className {
+		--mA7B_IzTPy: red;
+		--YclJTxMfvJ: 24px;
+		background: var(--mA7B_IzTPy);
+		border-color: var(--mA7B_IzTPy);
+		font-size: var(--YclJTxMfvJ);
+	}
+	"
+`;
+
+exports[`transformer function namespace 1`] = `
+"
+	.className {
+		--namespace-color: red;
+		--namespace-font-size: 24px;
+		background: var(--namespace-color);
+		border-color: var(--namespace-color);
+		font-size: var(--namespace-font-size);
+	}
+	"
+`;

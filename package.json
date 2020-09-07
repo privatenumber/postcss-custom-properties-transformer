@@ -1,15 +1,15 @@
 {
-  "name": "NODE-PACKAGE-TEMPLATE",
+  "name": "postcss-custom-properties-transformer",
   "version": "0.0.0-semantic-release",
   "description": "Template for Node package repos",
   "keywords": [],
   "license": "MIT",
-  "repository": "privatenumber/NODE-PACKAGE-TEMPLATE",
+  "repository": "privatenumber/postcss-custom-properties-transformer",
   "author": "Hiroki Osame <hiroki.osame@gmail.com>",
   "files": [
     "index.js"
   ],
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "jest",
     "lint": "xo"
@@ -26,6 +26,12 @@
     "husky": "^4.2.5",
     "jest": "^26.4.2",
     "lint-staged": "^10.2.13",
+    "rollup": "^2.26.8",
     "xo": "^0.33.0"
+  },
+  "dependencies": {
+    "cssesc": "^3.0.0",
+    "postcss": "^7.0.32",
+    "postcss-values-parser": "^3.2.1"
   }
 }

@@ -11,3 +11,7 @@ npm i pkg-name
 ```
 
 
+
+
+Truncate md5 because statisctically uniform
+https://stackoverflow.com/questions/18464517/6-character-short-hash-algorithm
