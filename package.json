@@ -12,7 +12,7 @@
   "repository": "privatenumber/postcss-custom-properties-transformer",
   "author": "Hiroki Osame <hiroki.osame@gmail.com>",
   "files": [
-    "index.js"
+    "lib"
   ],
   "main": "lib/index.js",
   "scripts": {
