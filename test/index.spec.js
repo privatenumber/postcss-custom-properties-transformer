@@ -28,6 +28,12 @@ describe('error handling', () => {
 	test('no transformer', async () => {
 		expect(() => transform(fixtures.basicVar, {})).toThrowError('[postcss-custom-properties] a transformer must be passed in');
 	});
+
+	test('invalid transformer', async () => {
+		expect(() => transform(fixtures.basicVar, {
+			transformer: 123,
+		})).toThrowError('[postcss-custom-properties] Unsupported transformer type "number"');
+	});
 });
 
 describe('template string', () => {

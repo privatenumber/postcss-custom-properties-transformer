@@ -24,7 +24,8 @@ Add `postcss-custom-properties-transformer` to your PostCSS configuration (eg. `
 ```diff
 module.exports = {
 	plugins: [
-		// Make sure it's above plugins that transform custom properties (eg. postcss-preset-env)
+		// Make sure it's above plugins that transform custom properties
+		// (eg. postcss-preset-env)
 +		require('postcss-custom-properties-transformer')({
 +			transformer: '[hash:4]'
 +		}),
@@ -47,7 +48,7 @@ require('postcss-custom-properties-transformer')({
 
 #### Namespace with package meta
 ```js
-const pkg = require('./package.json');
+const pkg = require('./package.json')
 require('postcss-custom-properties-transformer')({
 	transformer: `${pkg.name}-${pkg.version}-[local]`
 })
@@ -93,7 +94,7 @@ require('postcss-custom-properties-transformer')({
 ```
 
 ### Advanced transformations
-If you want to do something more complex—such as discriminate between custom properties (eg. theme variables)—, pass in a transformer function.
+If you want to do something more complex—such as discriminate between global and local custom properties (eg. theme variables)—, pass in a transformer function.
 
 ```js
 require('postcss-custom-properties-transformer')({
