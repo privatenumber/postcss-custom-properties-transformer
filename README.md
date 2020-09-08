@@ -126,7 +126,7 @@ require('postcss-custom-properties-transformer')({
 		- hashing algorithm (`md5`) - Any hashing algorithm [supported by `crypto`](https://nodejs.org/api/crypto.html#crypto_crypto_gethashes) (eg. `md5`, `sha1`, `sha256`)
 		- hash digest (`hex`) - Digest encoding to pass into `crypto` (eg. `hex`, `base64`)
 		- hash key (`local`) - What to hash (eg. `local`, `filepath`, `css`)
-		- length - The length to truncate the hash to
+		- length - The length to truncate the hash to. When truncating, it will also remove the leading digits in a hash if length permitting.
 
 - `transformer` `<Function>` `(ctx)`
 	- `ctx`
