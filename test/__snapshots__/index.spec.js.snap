@@ -63,11 +63,11 @@ exports[`template string hash hash - sha128 hash - truncated 5 1`] = `
 exports[`template string hash hash - sha128 hash 1`] = `
 "
 	.className {
-		--dda5dfb8053dc6d1c492574bce9bfd: red;
-		--b1d0abb705608d037a11c86fc75a1f1: 24px;
-		background: var(--dda5dfb8053dc6d1c492574bce9bfd);
-		border-color: var(--dda5dfb8053dc6d1c492574bce9bfd);
-		font-size: var(--b1d0abb705608d037a11c86fc75a1f1);
+		--_70dda5dfb8053dc6d1c492574bce9bfd: red;
+		--_9b1d0abb705608d037a11c86fc75a1f1: 24px;
+		background: var(--_70dda5dfb8053dc6d1c492574bce9bfd);
+		border-color: var(--_70dda5dfb8053dc6d1c492574bce9bfd);
+		font-size: var(--_9b1d0abb705608d037a11c86fc75a1f1);
 	}
 	"
 `;
@@ -87,11 +87,11 @@ exports[`template string hash hash - truncated 3 1`] = `
 exports[`template string hash hash 1`] = `
 "
 	.className {
-		--dda5dfb8053dc6d1c492574bce9bfd: red;
-		--b1d0abb705608d037a11c86fc75a1f1: 24px;
-		background: var(--dda5dfb8053dc6d1c492574bce9bfd);
-		border-color: var(--dda5dfb8053dc6d1c492574bce9bfd);
-		font-size: var(--b1d0abb705608d037a11c86fc75a1f1);
+		--_70dda5dfb8053dc6d1c492574bce9bfd: red;
+		--_9b1d0abb705608d037a11c86fc75a1f1: 24px;
+		background: var(--_70dda5dfb8053dc6d1c492574bce9bfd);
+		border-color: var(--_70dda5dfb8053dc6d1c492574bce9bfd);
+		font-size: var(--_9b1d0abb705608d037a11c86fc75a1f1);
 	}
 	"
 `;
