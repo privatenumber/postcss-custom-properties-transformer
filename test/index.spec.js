@@ -133,6 +133,16 @@ describe('transformer function', () => {
 		expect(output).toMatchSnapshot();
 	});
 
+	test('return template', async () => {
+		const output = await transform(fixtures.basicVar, {
+			transformer() {
+				return '[filepath]-[local]';
+			},
+		});
+
+		expect(output).toMatchSnapshot();
+	});
+
 	test('collision warning', async () => {
 		const warn = jest.spyOn(global.console, 'warn').mockImplementation();
 

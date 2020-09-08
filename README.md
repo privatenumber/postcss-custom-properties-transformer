@@ -103,7 +103,12 @@ require('postcss-custom-properties-transformer')({
 		if (ctx.local.startsWith('theme-')) {
 			return ctx.local;
 		}
-		return ctx.hash('local', 4);
+
+		// You can return a template
+		return `[hash:filepath:4]-[hash:4]`;
+
+		// Alternatively, you can use the functions
+		return ctx.hash('filepath', 4) + '-' + ctx.hash(4);
 	}
 })
 ```

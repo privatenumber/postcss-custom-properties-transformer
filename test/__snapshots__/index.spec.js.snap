@@ -143,3 +143,15 @@ exports[`transformer function namespace 1`] = `
 	}
 	"
 `;
+
+exports[`transformer function return template 1`] = `
+"
+	.className {
+		--_dir_src_file_css-color: red;
+		--_dir_src_file_css-font-size: 24px;
+		background: var(--_dir_src_file_css-color);
+		border-color: var(--_dir_src_file_css-color);
+		font-size: var(--_dir_src_file_css-font-size);
+	}
+	"
+`;
