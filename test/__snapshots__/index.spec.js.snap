@@ -96,6 +96,18 @@ exports[`template string hash hash 1`] = `
 	"
 `;
 
+exports[`template string hash salt 1`] = `
+"
+	.className {
+		--f3c-eb5: red;
+		--f3c-bbc: 24px;
+		background: var(--f3c-eb5);
+		border-color: var(--f3c-eb5);
+		font-size: var(--f3c-bbc);
+	}
+	"
+`;
+
 exports[`template string namespace 1`] = `
 "
 	.className {

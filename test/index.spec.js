@@ -110,6 +110,15 @@ describe('template string', () => {
 			expect(output).toMatchSnapshot();
 		});
 	});
+
+	test('hash salt', async () => {
+		const output = await transform(fixtures.basicVar, {
+			hashSalt: 'salt',
+			transformer: '[hash:filepath:3]-[hash:3]',
+		});
+
+		expect(output).toMatchSnapshot();
+	});
 });
 
 describe('transformer function', () => {
