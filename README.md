@@ -23,15 +23,15 @@ Add `postcss-custom-properties-transformer` to your PostCSS configuration (eg. `
 
 ```diff
 module.exports = {
-	plugins: [
+    plugins: [
 
-		// Insert above plugins that transform custom properties
-+		require('postcss-custom-properties-transformer')({
-+			transformer: '[hash:4]'
-+		}),
+        // Insert above plugins that transform custom properties
++        require('postcss-custom-properties-transformer')({
++            transformer: '[hash:4]'
++        }),
 
-		require('postcss-preset-env')()
-	]
+        require('postcss-preset-env')()
+    ]
 };
 ```
 
@@ -43,7 +43,7 @@ Prefix all custom properties with a string to brand and reduce any inadvertent c
 
 ```js
 require('postcss-custom-properties-transformer')({
-	transformer: 'namespace-[local]'
+    transformer: 'namespace-[local]'
 })
 ```
 
@@ -51,7 +51,7 @@ require('postcss-custom-properties-transformer')({
 ```js
 const pkg = require('./package.json')
 require('postcss-custom-properties-transformer')({
-	transformer: `${pkg.name}-${pkg.version}-[local]`
+    transformer: `${pkg.name}-${pkg.version}-[local]`
 })
 ```
 
@@ -60,7 +60,7 @@ This will MD5 hash the custom property name. The effect is close to the namespac
 
 ```js
 require('postcss-custom-properties-transformer')({
-	transformer: '[hash]'
+    transformer: '[hash]'
 })
 ```
 
@@ -71,7 +71,7 @@ Note: the shorter the hash, the higher the collision rate. There will be a warni
 
 ```js
 require('postcss-custom-properties-transformer')({
-	transformer: '[hash:4]'
+    transformer: '[hash:4]'
 })
 ```
 
@@ -80,7 +80,7 @@ If you have local custom properties (eg. black-boxed component), you might want 
 
 ```js
 require('postcss-custom-properties-transformer')({
-	transformer: '[filepath]-[local]'
+    transformer: '[filepath]-[local]'
 })
 ```
 
@@ -90,7 +90,7 @@ If the `filepath` is too verbose, pass `filepath` to the `hash` template to hash
 
 ```js
 require('postcss-custom-properties-transformer')({
-	transformer: '[hash:filepath:4]-[hash:4]'
+    transformer: '[hash:filepath:4]-[hash:4]'
 })
 ```
 
@@ -99,17 +99,17 @@ If you want to do something more complex—such as discriminate between global a
 
 ```js
 require('postcss-custom-properties-transformer')({
-	transformer(ctx) {
-		if (ctx.local.startsWith('theme-')) {
-			return ctx.local;
-		}
+    transformer(ctx) {
+        if (ctx.local.startsWith('theme-')) {
+            return ctx.local;
+        }
 
-		// You can return a template
-		return `[hash:filepath:4]-[hash:4]`;
+        // You can return a template
+        return `[hash:filepath:4]-[hash:4]`;
 
-		// Alternatively, you can use the functions
-		return ctx.hash('filepath', 4) + '-' + ctx.hash(4);
-	}
+        // Alternatively, you can use the functions
+        return ctx.hash('filepath', 4) + '-' + ctx.hash(4);
+    }
 })
 ```
 
@@ -117,23 +117,23 @@ require('postcss-custom-properties-transformer')({
 ## ⚙️ Options
 - `transformer` `<String>`
 
-	Templates:
-	- `[filepath]` - Absolute path to the CSS file
-	- `[local]` - Custom property name being transformed
-	- `[hash]`
+    Templates:
+    - `[filepath]` - Absolute path to the CSS file
+    - `[local]` - Custom property name being transformed
+    - `[hash]`
 
-		Arguments:
-		- hashing algorithm (`md5`) - Any hashing algorithm [supported by `crypto`](https://nodejs.org/api/crypto.html#crypto_crypto_gethashes) (eg. `md5`, `sha1`, `sha256`)
-		- hash digest (`hex`) - Digest encoding to pass into `crypto` (eg. `hex`, `base64`)
-		- hash key (`local`) - What to hash (eg. `local`, `filepath`, `css`)
-		- length - The length to truncate the hash to. When truncating, it will also remove the leading digits in a hash if length permitting.
+        Arguments:
+        - hashing algorithm (`md5`) - Any hashing algorithm [supported by `crypto`](https://nodejs.org/api/crypto.html#crypto_crypto_gethashes) (eg. `md5`, `sha1`, `sha256`)
+        - hash digest (`hex`) - Digest encoding to pass into `crypto` (eg. `hex`, `base64`)
+        - hash key (`local`) - What to hash (eg. `local`, `filepath`, `css`)
+        - length - The length to truncate the hash to. When truncating, it will also remove the leading digits in a hash if length permitting.
 
 - `transformer` `<Function>` `(ctx)`
-	- `ctx`
-		- `filepath`
-		- `local`
-		- `css` 
-		- `hash()` - Hashing function. Accepts parameters in arbitrary order. (`ctx.hash('filepath', 'sha-256', 'base64', 4)`)
+    - `ctx`
+        - `filepath`
+        - `local`
+        - `css` 
+        - `hash()` - Hashing function. Accepts parameters in arbitrary order. (`ctx.hash('filepath', 'sha-256', 'base64', 4)`)
 
 
 
