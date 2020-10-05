@@ -1,4 +1,4 @@
-const {transform, hash} = require('./utils');
+const {transform, md5} = require('./utils');
 const fixtures = require('./fixtures');
 
 describe('error handling', () => {
@@ -31,8 +31,8 @@ describe('error handling', () => {
 describe('transformer function', () => {
 	test('namespace', async () => {
 		const output = await transform(fixtures, {
-			transformer({local}) {
-				return `app-${local}`;
+			transformer({property}) {
+				return `app-${property}`;
 			},
 		});
 
@@ -41,8 +41,8 @@ describe('transformer function', () => {
 
 	test('emoji namespace', async () => {
 		const output = await transform(fixtures, {
-			transformer({local}) {
-				return `🔥-${local}`;
+			transformer({property}) {
+				return `🔥-${property}`;
 			},
 		});
 
@@ -51,8 +51,8 @@ describe('transformer function', () => {
 
 	test('custom hash', async () => {
 		const output = await transform(fixtures, {
-			transformer({local}) {
-				return hash(local).slice(0, 6);
+			transformer({property}) {
+				return md5(property).slice(0, 6);
 			},
 		});
 
@@ -61,8 +61,8 @@ describe('transformer function', () => {
 
 	test('custom hash - scoped to file', async () => {
 		const output = await transform(fixtures, {
-			transformer({local, filepath}) {
-				return hash(filepath + local).slice(0, 6);
+			transformer({property, filepath}) {
+				return md5(filepath + property).slice(0, 6);
 			},
 		});
 

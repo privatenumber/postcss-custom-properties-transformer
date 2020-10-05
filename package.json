@@ -25,13 +25,15 @@
     }
   },
   "lint-staged": {
-    "*.js": "xo"
+    "*.js": [
+      "xo",
+      "jest --bail --findRelatedTests"
+    ]
   },
   "devDependencies": {
     "husky": "^4.2.5",
     "jest": "^26.4.2",
     "lint-staged": "^10.2.13",
-    "rollup": "^2.26.8",
     "xo": "^0.33.0"
   },
   "dependencies": {

@@ -2,7 +2,7 @@ const crypto = require('crypto');
 const postcss = require('postcss');
 const postcssCustomPropertiesTransformer = require('..');
 
-const hash = string => crypto.createHash('md5').update(string).digest('hex');
+const md5 = string => crypto.createHash('md5').update(string).digest('hex');
 
 const transform = (cssFiles, options) => {
 	const processor = postcss([
@@ -20,5 +20,5 @@ const transform = (cssFiles, options) => {
 
 module.exports = {
 	transform,
-	hash,
+	md5,
 };
