@@ -34,6 +34,8 @@ describe('error handling', () => {
 			transformer: 123,
 		})).toThrowError('[postcss-custom-properties] Unsupported transformer type "number"');
 	});
+
+	// Error on collision
 });
 
 describe('template string', () => {
