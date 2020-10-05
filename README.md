@@ -38,6 +38,9 @@ module.exports = {
 
 ## 👨🏻‍🏫 Examples
 
+
+Browser implementation may vary but https://stackoverflow.com/a/42311038
+
 ### Namespace custom properties
 Prefix all custom properties with a string to brand and reduce any inadvertent collisions with custom properties from other libraries.
 
