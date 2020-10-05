@@ -42,6 +42,8 @@ module.exports = {
 ## 👨🏻‍🏫 Examples
 
 ### Namespace with package meta
+If you have a CSS library, you can scope your custom properties to every release so that multiple versions of the library used in the same app doesn't yield any collisions.
+
 ```js
 const pkg = require('./package.json')
 require('postcss-custom-properties-transformer')({
@@ -54,7 +56,9 @@ require('postcss-custom-properties-transformer')({
 ### Hash custom properties
 If you want to hash your custom properties to shorten/obfuscate them, pass in a hashing algorithm of your choice.
 
-This demo uses a 6-character truncated MD5 hash; MD5 and the SHA-family has [statistically good uniform distribution](https://stackoverflow.com/questions/8184941/uniform-distribution-of-truncated-md5) and can be truncated. However, note that the shorter the hash, the higher the collision rate. There will be a warning if a collision is detected.
+This demo uses a 6-character truncated MD5 hash; MD5 and the SHA-family has [statistically good uniform distribution](https://stackoverflow.com/questions/8184941/uniform-distribution-of-truncated-md5) and can be truncated.
+
+However, note that the shorter the hash, the higher the collision rate. There will be a warning if a collision is detected.
 
 ```js
 const crypto = require('crypto');
