@@ -1,169 +1,169 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`template string filepath 1`] = `
-"
-	.className {
-		--_dir_src_file_css-color: red;
-		--_dir_src_file_css-font-size: 24px;
-		background: var(--_dir_src_file_css-color);
-		border-color: var(--_dir_src_file_css-color);
-		font-size: var(--_dir_src_file_css-font-size);
+exports[`transformer function custom hash - scoped to file 1`] = `
+Array [
+  "
+	.button {
+		--ae7621: red;
+		--b682a4: 24px;
+		background: var(--ae7621);
+		border-color: var(--ae7621);
+		font-size: var(--b682a4);
 	}
-	"
+
+	.input {
+		--ae7621: red;
+		--b682a4: 24px;
+		background: var(--ae7621);
+		border-color: var(--ae7621);
+		font-size: var(--b682a4);
+		border: 1px solid var(--ae7621);
+	}
+	",
+  "
+	:root {
+		--199650: red;
+		--29d9c5: 24px;
+		--d85b32: calc(var(--29d9c5) * 2);
+	}
+	.section {
+		background: var(--199650);
+		border-color: var(--199650);
+		font-size: var(--29d9c5);
+	}
+
+	.heading {
+		background: var(--199650);
+		border-color: var(--199650);
+		font-size: var(--29d9c5);
+		border: 1px solid var(--199650);
+	}
+	",
+]
 `;
 
-exports[`template string hash hash - base64 digest - truncated 5 1`] = `
-"
-	.className {
-		--cN2l3: red;
-		--mx0Ku: 24px;
-		background: var(--cN2l3);
-		border-color: var(--cN2l3);
-		font-size: var(--mx0Ku);
+exports[`transformer function custom hash 1`] = `
+Array [
+  "
+	.button {
+		--70dda5: red;
+		--9b1d0a: 24px;
+		background: var(--70dda5);
+		border-color: var(--70dda5);
+		font-size: var(--9b1d0a);
 	}
-	"
+
+	.input {
+		--70dda5: red;
+		--9b1d0a: 24px;
+		background: var(--70dda5);
+		border-color: var(--70dda5);
+		font-size: var(--9b1d0a);
+		border: 1px solid var(--70dda5);
+	}
+	",
+  "
+	:root {
+		--70dda5: red;
+		--9b1d0a: 24px;
+		--defe4c: calc(var(--9b1d0a) * 2);
+	}
+	.section {
+		background: var(--70dda5);
+		border-color: var(--70dda5);
+		font-size: var(--9b1d0a);
+	}
+
+	.heading {
+		background: var(--70dda5);
+		border-color: var(--70dda5);
+		font-size: var(--9b1d0a);
+		border: 1px solid var(--70dda5);
+	}
+	",
+]
 `;
 
-exports[`template string hash hash - base64 digest 1`] = `
-"
-	.className {
-		--cN2l37gFPcbRxJJXS86b_Q__: red;
-		--mx0Ku3BWCNA3oRyG_HWh8Q__: 24px;
-		background: var(--cN2l37gFPcbRxJJXS86b_Q__);
-		border-color: var(--cN2l37gFPcbRxJJXS86b_Q__);
-		font-size: var(--mx0Ku3BWCNA3oRyG_HWh8Q__);
+exports[`transformer function emoji namespace 1`] = `
+Array [
+  "
+	.button {
+		--🔥-color: red;
+		--🔥-font-size: 24px;
+		background: var(--🔥-color);
+		border-color: var(--🔥-color);
+		font-size: var(--🔥-font-size);
 	}
-	"
-`;
 
-exports[`template string hash hash - filepath namespace 1`] = `
-"
-	.className {
-		--d9d-dda: red;
-		--d9d-b1d: 24px;
-		background: var(--d9d-dda);
-		border-color: var(--d9d-dda);
-		font-size: var(--d9d-b1d);
+	.input {
+		--🔥-color: red;
+		--🔥-font-size: 24px;
+		background: var(--🔥-color);
+		border-color: var(--🔥-color);
+		font-size: var(--🔥-font-size);
+		border: 1px solid var(--🔥-color);
 	}
-	"
-`;
+	",
+  "
+	:root {
+		--🔥-color: red;
+		--🔥-font-size: 24px;
+		--🔥-large-font-size: calc(var(--🔥-font-size) * 2);
+	}
+	.section {
+		background: var(--🔥-color);
+		border-color: var(--🔥-color);
+		font-size: var(--🔥-font-size);
+	}
 
-exports[`template string hash hash - sha128 hash - truncated 5 1`] = `
-"
-	.className {
-		--dda5d: red;
-		--b1d0a: 24px;
-		background: var(--dda5d);
-		border-color: var(--dda5d);
-		font-size: var(--b1d0a);
+	.heading {
+		background: var(--🔥-color);
+		border-color: var(--🔥-color);
+		font-size: var(--🔥-font-size);
+		border: 1px solid var(--🔥-color);
 	}
-	"
-`;
-
-exports[`template string hash hash - sha128 hash 1`] = `
-"
-	.className {
-		--_70dda5dfb8053dc6d1c492574bce9bfd: red;
-		--_9b1d0abb705608d037a11c86fc75a1f1: 24px;
-		background: var(--_70dda5dfb8053dc6d1c492574bce9bfd);
-		border-color: var(--_70dda5dfb8053dc6d1c492574bce9bfd);
-		font-size: var(--_9b1d0abb705608d037a11c86fc75a1f1);
-	}
-	"
-`;
-
-exports[`template string hash hash - truncated 3 1`] = `
-"
-	.className {
-		--dda: red;
-		--b1d: 24px;
-		background: var(--dda);
-		border-color: var(--dda);
-		font-size: var(--b1d);
-	}
-	"
-`;
-
-exports[`template string hash hash 1`] = `
-"
-	.className {
-		--_70dda5dfb8053dc6d1c492574bce9bfd: red;
-		--_9b1d0abb705608d037a11c86fc75a1f1: 24px;
-		background: var(--_70dda5dfb8053dc6d1c492574bce9bfd);
-		border-color: var(--_70dda5dfb8053dc6d1c492574bce9bfd);
-		font-size: var(--_9b1d0abb705608d037a11c86fc75a1f1);
-	}
-	"
-`;
-
-exports[`template string hash salt 1`] = `
-"
-	.className {
-		--f3c-eb5: red;
-		--f3c-bbc: 24px;
-		background: var(--f3c-eb5);
-		border-color: var(--f3c-eb5);
-		font-size: var(--f3c-bbc);
-	}
-	"
-`;
-
-exports[`template string namespace 1`] = `
-"
-	.className {
-		--namespace-color: red;
-		--namespace-font-size: 24px;
-		background: var(--namespace-color);
-		border-color: var(--namespace-color);
-		font-size: var(--namespace-font-size);
-	}
-	"
-`;
-
-exports[`transformer function collision warning 1`] = `
-"
-	.className {
-		--collide: red;
-		--collide: 24px;
-		background: var(--collide);
-		border-color: var(--collide);
-		font-size: var(--collide);
-	}
-	"
-`;
-
-exports[`transformer function hash 1`] = `
-"
-	.className {
-		--cN2l37gFPc: red;
-		--mx0Ku3BWCN: 24px;
-		background: var(--cN2l37gFPc);
-		border-color: var(--cN2l37gFPc);
-		font-size: var(--mx0Ku3BWCN);
-	}
-	"
+	",
+]
 `;
 
 exports[`transformer function namespace 1`] = `
-"
-	.className {
-		--namespace-color: red;
-		--namespace-font-size: 24px;
-		background: var(--namespace-color);
-		border-color: var(--namespace-color);
-		font-size: var(--namespace-font-size);
+Array [
+  "
+	.button {
+		--app-color: red;
+		--app-font-size: 24px;
+		background: var(--app-color);
+		border-color: var(--app-color);
+		font-size: var(--app-font-size);
 	}
-	"
-`;
 
-exports[`transformer function return template 1`] = `
-"
-	.className {
-		--_dir_src_file_css-color: red;
-		--_dir_src_file_css-font-size: 24px;
-		background: var(--_dir_src_file_css-color);
-		border-color: var(--_dir_src_file_css-color);
-		font-size: var(--_dir_src_file_css-font-size);
+	.input {
+		--app-color: red;
+		--app-font-size: 24px;
+		background: var(--app-color);
+		border-color: var(--app-color);
+		font-size: var(--app-font-size);
+		border: 1px solid var(--app-color);
 	}
-	"
+	",
+  "
+	:root {
+		--app-color: red;
+		--app-font-size: 24px;
+		--app-large-font-size: calc(var(--app-font-size) * 2);
+	}
+	.section {
+		background: var(--app-color);
+		border-color: var(--app-color);
+		font-size: var(--app-font-size);
+	}
+
+	.heading {
+		background: var(--app-color);
+		border-color: var(--app-color);
+		font-size: var(--app-font-size);
+		border: 1px solid var(--app-color);
+	}
+	",
+]
 `;
