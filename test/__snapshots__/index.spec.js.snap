@@ -4,39 +4,39 @@ exports[`transformer function custom hash - scoped to file 1`] = `
 Array [
   "
 	.button {
-		--cac628: red;
-		--2581ae: 24px;
-		background: var(--cac628);
-		border-color: var(--cac628);
-		font-size: var(--2581ae);
+		--ae7621: red;
+		--b682a4: 24px;
+		background: var(--ae7621);
+		border-color: var(--ae7621);
+		font-size: var(--b682a4);
 	}
 
 	.input {
-		--cac628: red;
-		--2581ae: 24px;
-		background: var(--cac628);
-		border-color: var(--cac628);
-		font-size: var(--2581ae);
-		border: 1px solid var(--cac628);
+		--ae7621: red;
+		--b682a4: 24px;
+		background: var(--ae7621);
+		border-color: var(--ae7621);
+		font-size: var(--b682a4);
+		border: 1px solid var(--ae7621);
 	}
 	",
   "
 	:root {
-		--5aaf0e: red;
-		--429a72: 24px;
-		--e492b3: calc(var(--429a72) * 2);
+		--199650: red;
+		--29d9c5: 24px;
+		--d85b32: calc(var(--29d9c5) * 2);
 	}
 	.section {
-		background: var(--5aaf0e);
-		border-color: var(--5aaf0e);
-		font-size: var(--429a72);
+		background: var(--199650);
+		border-color: var(--199650);
+		font-size: var(--29d9c5);
 	}
 
 	.heading {
-		background: var(--5aaf0e);
-		border-color: var(--5aaf0e);
-		font-size: var(--429a72);
-		border: 1px solid var(--5aaf0e);
+		background: var(--199650);
+		border-color: var(--199650);
+		font-size: var(--29d9c5);
+		border: 1px solid var(--199650);
 	}
 	",
 ]

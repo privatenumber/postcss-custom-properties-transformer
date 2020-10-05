@@ -11,8 +11,7 @@ const transform = (cssFiles, options) => {
 
 	return Promise.all(Object.entries(cssFiles).map(async ([name, cssFile]) => {
 		const result = await processor.process(cssFile, {
-			from: name,
-			to: name,
+			from: '/' + name,
 		});
 		return result.css;
 	}));
