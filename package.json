@@ -1,15 +1,20 @@
 {
-  "name": "NODE-PACKAGE-TEMPLATE",
+  "name": "postcss-custom-properties-transformer",
   "version": "0.0.0-semantic-release",
-  "description": "Template for Node package repos",
-  "keywords": [],
+  "description": "PostCSS plugin to transform custom properties",
+  "keywords": [
+    "postcss",
+    "plugin",
+    "custom properties",
+    "transformer"
+  ],
   "license": "MIT",
-  "repository": "privatenumber/NODE-PACKAGE-TEMPLATE",
+  "repository": "privatenumber/postcss-custom-properties-transformer",
   "author": "Hiroki Osame <hiroki.osame@gmail.com>",
   "files": [
-    "index.js"
+    "lib"
   ],
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "jest",
     "lint": "xo"
@@ -20,12 +25,19 @@
     }
   },
   "lint-staged": {
-    "*.js": "xo"
+    "*.js": [
+      "xo",
+      "jest --bail --findRelatedTests"
+    ]
   },
   "devDependencies": {
     "husky": "^4.2.5",
     "jest": "^26.4.2",
     "lint-staged": "^10.2.13",
     "xo": "^0.33.0"
+  },
+  "dependencies": {
+    "postcss": "^7.0.32",
+    "postcss-values-parser": "^3.2.1"
   }
 }
