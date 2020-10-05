@@ -1,5 +1,6 @@
 const postcss = require('postcss');
 const postcssCustomPropertiesTransformer = require('..');
+const fixtures = require('./fixtures');
 
 const transform = (css, options) => postcss([
 	postcssCustomPropertiesTransformer(options),
@@ -8,34 +9,31 @@ const transform = (css, options) => postcss([
 	to: '/dir/dist/file.css',
 }).then(({css}) => css);
 
-const fixtures = {
-	basicVar: `
-	.className {
-		--color: red;
-		--font-size: 24px;
-		background: var(--color);
-		border-color: var(--color);
-		font-size: var(--font-size);
-	}
-	`,
-};
-
 describe('error handling', () => {
-	test('no options', async () => {
+	test('no options', () => {
 		expect(() => transform(fixtures.basicVar)).toThrowError('[postcss-custom-properties] a transformer must be passed in');
 	});
 
-	test('no transformer', async () => {
+	test('no transformer', () => {
 		expect(() => transform(fixtures.basicVar, {})).toThrowError('[postcss-custom-properties] a transformer must be passed in');
 	});
 
-	test('invalid transformer', async () => {
+	test('invalid transformer', () => {
 		expect(() => transform(fixtures.basicVar, {
 			transformer: 123,
 		})).toThrowError('[postcss-custom-properties] Unsupported transformer type "number"');
 	});
 
-	// Error on collision
+	test('transformer collision', async () => {
+		const spy = jest.spyOn(global.console, 'warn').mockImplementation();
+		await transform(fixtures.basicVar, {
+			transformer() {
+				return 'constant-value';
+			},
+		});
+		expect(spy).toHaveBeenCalledWith('[postcss-custom-properties-transformer] Collision: property name "constant-value" was generated from input "font-size" but was already generated from input "color"');
+		spy.mockRestore();
+	});
 });
 
 describe('template string', () => {
