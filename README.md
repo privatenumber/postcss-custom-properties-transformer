@@ -20,6 +20,8 @@ npm i -D postcss postcss-custom-properties-transformer
 
 Add `postcss-custom-properties-transformer` to your PostCSS configuration (eg. `postcss.config.js`) and pass in a `transformer` function.
 
+> Warning: this plugin doesn't validate custom properties. [Make sure to not use invalid characters (eg. period)](https://stackoverflow.com/a/42311038)
+
 ```diff
 module.exports = {
      plugins: [
@@ -27,8 +29,8 @@ module.exports = {
 +        // Insert above plugins that read custom properties
 +        require('postcss-custom-properties-transformer')({
 +            transformer({ property }) {
-+                // Prefixing all custom properties with 🤖
-+                return '🤖' + property;
++                // Prefixing all custom properties with 'APP-'
++                return 'APP-' + property;
 +            }
 +        }),
 
@@ -38,8 +40,6 @@ module.exports = {
 ```
 
 ## 👨🏻‍🏫 Examples
-
-Browser implementation may vary but https://stackoverflow.com/a/42311038
 
 ### Namespace with package meta
 ```js
