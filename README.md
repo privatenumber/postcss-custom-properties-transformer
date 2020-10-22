@@ -20,7 +20,7 @@ npm i -D postcss postcss-custom-properties-transformer
 
 Add `postcss-custom-properties-transformer` to your PostCSS configuration (eg. `postcss.config.js`) and pass in a `transformer` function.
 
-> Warning: this plugin doesn't validate custom properties. [Make sure to not use invalid characters (eg. period)](https://stackoverflow.com/a/42311038)
+> ⚠️  This plugin doesn't validate custom properties as browsers seem to validate them differently. As per the spec, custom properties is ["defined as any valid identifier that starts with two dashes"](https://www.w3.org/TR/css-variables-1/#defining-variables). An "identifier" can contain ["only the characters [a-zA-Z0-9] and ISO 10646 characters U+0080 and higher, plus the hyphen (-) and the underscore (_); they cannot start with a digit, two hyphens, or a hyphen followed by a digit"](https://www.w3.org/TR/CSS22/syndata.html#value-def-identifier).
 
 ```diff
 module.exports = {
