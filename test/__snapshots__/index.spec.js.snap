@@ -1,5 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`transform options value declarations 1`] = `
+Array [
+  "
+	.button {
+		--app-color: red;
+		--app-font-size: 24px;
+		background: var(--app-color);
+		border-color: var(--app-color);
+		font-size: var(--app-font-size);
+	}
+
+	.input {
+		--app-color: red;
+		--app-font-size: 24px;
+		background: var(--app-color);
+		border-color: var(--app-color);
+		font-size: var(--app-font-size);
+		border: 1px solid var(--app-color);
+	}
+
+	@value color: var(--app-color);
+	@value largeFontSize: calc(var(--app-font-size) * 2);
+	",
+  "
+	:root {
+		--app-color: red;
+		--app-font-size: 24px;
+		--app-large-font-size: calc(var(--app-font-size) * 2);
+	}
+	.section {
+		background: var(--app-color);
+		border-color: var(--app-color);
+		font-size: var(--app-font-size);
+	}
+
+	.heading {
+		background: var(--app-color);
+		border-color: var(--app-color);
+		font-size: var(--app-font-size);
+		border: 1px solid var(--app-color);
+	}
+	",
+]
+`;
+
 exports[`transformer function custom hash - scoped to file 1`] = `
 Array [
   "
@@ -19,6 +64,9 @@ Array [
 		font-size: var(--b682a4);
 		border: 1px solid var(--ae7621);
 	}
+
+	@value color: var(--color);
+	@value largeFontSize: calc(var(--font-size) * 2);
 	",
   "
 	:root {
@@ -61,6 +109,9 @@ Array [
 		font-size: var(--9b1d0a);
 		border: 1px solid var(--70dda5);
 	}
+
+	@value color: var(--color);
+	@value largeFontSize: calc(var(--font-size) * 2);
 	",
   "
 	:root {
@@ -103,6 +154,9 @@ Array [
 		font-size: var(--🔥-font-size);
 		border: 1px solid var(--🔥-color);
 	}
+
+	@value color: var(--color);
+	@value largeFontSize: calc(var(--font-size) * 2);
 	",
   "
 	:root {
@@ -145,6 +199,9 @@ Array [
 		font-size: var(--app-font-size);
 		border: 1px solid var(--app-color);
 	}
+
+	@value color: var(--color);
+	@value largeFontSize: calc(var(--font-size) * 2);
 	",
   "
 	:root {

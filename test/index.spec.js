@@ -69,3 +69,16 @@ describe('transformer function', () => {
 		expect(output).toMatchSnapshot();
 	});
 });
+
+describe('transform options', () => {
+	test('value declarations', async () => {
+		const output = await transform(fixtures, {
+			transformValueDeclarations: true,
+			transformer({property}) {
+				return `app-${property}`;
+			},
+		});
+
+		expect(output).toMatchSnapshot();
+	});
+});

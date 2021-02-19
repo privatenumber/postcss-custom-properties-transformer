@@ -16,6 +16,9 @@ const fixtures = {
 		font-size: var(--font-size);
 		border: 1px solid var(--color);
 	}
+
+	@value color: var(--color);
+	@value largeFontSize: calc(var(--font-size) * 2);
 	`,
 	'file-b.css': `
 	:root {
