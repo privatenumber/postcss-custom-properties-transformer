@@ -2,6 +2,8 @@
 
 PostCSS plugin to transform [CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)
 
+<sub>If you like this project, please star it & [follow me](https://github.com/privatenumber) to see what other cool projects I'm working on! ❤️</sub>
+
 ## 🙋‍♂️ Why?
 
 Transform CSS custom properties to...
