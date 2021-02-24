@@ -91,3 +91,4 @@ require('postcss-custom-properties-transformer')({
     - `property` `<String>` - The custom property name that's being transformed. The `--` prefix is omitted
     - `filepath` `<String>` - The path to the file where the custom property is being transformed
     - `css` `<String>` - The entire CSS code of the file
+- `transformValueDeclarations` `<Boolean>` - If enabled, custom properties in `@value` declarations will also be considered for transformation
