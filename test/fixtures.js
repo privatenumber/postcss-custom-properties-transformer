@@ -19,6 +19,7 @@ const fixtures = {
 
 	@value color: var(--color);
 	@value largeFontSize: calc(var(--font-size) * 2);
+	@value staticSelectorValue: .someSelector;
 	`,
 	'file-b.css': `
 	:root {

@@ -22,6 +22,7 @@ Array [
 
 	@value color: var(--app-color);
 	@value largeFontSize: calc(var(--app-font-size) * 2);
+	@value staticSelectorValue: .someSelector;
 	",
   "
 	:root {
@@ -67,6 +68,7 @@ Array [
 
 	@value color: var(--color);
 	@value largeFontSize: calc(var(--font-size) * 2);
+	@value staticSelectorValue: .someSelector;
 	",
   "
 	:root {
@@ -112,6 +114,7 @@ Array [
 
 	@value color: var(--color);
 	@value largeFontSize: calc(var(--font-size) * 2);
+	@value staticSelectorValue: .someSelector;
 	",
   "
 	:root {
@@ -157,6 +160,7 @@ Array [
 
 	@value color: var(--color);
 	@value largeFontSize: calc(var(--font-size) * 2);
+	@value staticSelectorValue: .someSelector;
 	",
   "
 	:root {
@@ -202,6 +206,7 @@ Array [
 
 	@value color: var(--color);
 	@value largeFontSize: calc(var(--font-size) * 2);
+	@value staticSelectorValue: .someSelector;
 	",
   "
 	:root {
